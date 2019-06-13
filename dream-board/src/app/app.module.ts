@@ -1,27 +1,44 @@
+import { AppRoutingModule } from './app-routing';
 import { BrowserModule } from '@angular/platform-browser';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { SideBarComponent } from './shared/side-bar/side-bar.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignUpModule } from './auth/sign-up/sign-up.module';
+import { RouterModule } from '@angular/router';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SideBarComponent,
+    HomeComponent,
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase, 'my-app-name'),
+    SignUpModule,
+    AngularFireModule.initializeApp(environment.firebase, 'dream-board'),
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
-    AngularFireDatabaseModule
-
+    AngularFireDatabaseModule,
+    AngularFireMessagingModule,
+    AngularFireFunctionsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

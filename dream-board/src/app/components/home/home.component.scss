@@ -1,0 +1,26 @@
+.home-board-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3rem;
+  align-items: center;
+  background-image: url(src/assets/ranger-4df6c1b6.png);
+  background-repeat: round;
+
+  h1{
+    margin-bottom: 2rem;
+  }
+
+  .home-board-button {
+    margin: 0.5rem;
+    height: 2rem;
+    width: 10rem;
+    border: 0.1rem solid #c3c3c3;
+    border-radius: 1rem;
+  }
+
+}
