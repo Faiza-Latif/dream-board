@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpModule } from './auth/sign-up/sign-up.module';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -28,6 +29,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     SignUpModule,
     AngularFireModule.initializeApp(environment.firebase, 'dream-board'),
     AngularFireAuthModule,
