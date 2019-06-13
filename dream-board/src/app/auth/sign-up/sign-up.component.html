@@ -1,17 +1,28 @@
 <div class="sign-up-container">
-  <h1>Sign me up!</h1>
+  <div class="row">
+    <div class="column">
+    <h1>Sign me up!</h1>
     <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
           <label>First Name</label>
-          <input formControlName="firstName" />
+          <input formControlName="firstName" type="text"/>
           <label>Last Name</label>
-          <input formControlName="lastName" />
+          <input formControlName="lastName" type="text" />
           <label>Email</label>
         <input formControlName="email" type="email" />
+        <div class="sign-up-file">
         <h6>Insert a picture for your Avatar</h6>
-        <input formControlName="picture" type="file" class="sign-up-file"/>
-        <button type="submit" class="sign-up-button">Save</button>
+        <input formControlName="picture" type="file" />
+      </div>
+        <button [disabled]=mandatoryFilled type="submit" class="sign-up-button">Save</button>
         <button type="reset" (click)="reset()" class="sign-up-button">
           Reset
         </button>
       </form>
+      </div>
+      <div class="column sidebar">
+        <div class="avatar-container">
+            <img src="/assets/ZEbd.gif" alt="Smiley face">
+          </div>
+      </div>
+    </div>
   </div>
