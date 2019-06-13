@@ -6,16 +6,20 @@
   div.column {
     padding-top: 3rem;
     padding-left: 10rem;
-    width:70%;
+    max-width:60%;
+    min-width: 25rem;
     &.sidebar{
-      margin-right: 5rem;
+      margin-right: 3rem;
       max-width: 30%;
       width: fit-content;
+      align-content: center;
+      align-self: center;
+      text-align: center;
     }
   }
 }
   form {
-
+    margin-top: 2rem;
     display: flex;
     align-content: center;
     flex-direction: column;
@@ -25,7 +29,8 @@
     }
 
     input[type=text], input[type=email] {
-      width: 20rem;
+      width: 25rem;
+      height: 3rem;
     }
 
 
@@ -35,7 +40,7 @@
         margin-bottom: 1rem;
       }
       max-width: 15rem;
-      height: 2.3rem;
+      height: 2.5rem;
       width: 15rem;
       color: darkcyan;
       background-color: aliceblue;
@@ -60,10 +65,9 @@
   }
 
   .avatar-container {
+    display: flex;
     width: fit-content;
     height: fit-content;
-    position: absolute;
-    top: 0;
-    right: 5rem;
+
   }
 }
