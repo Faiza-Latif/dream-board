@@ -1,36 +1,18 @@
 .sign-up-container {
-  div.row {
-    display: inline-flex;
-    width: 100%;
+  flex: 1 1 auto;
+  margin: 5rem;
+  display: flex;
+  justify-content: space-evenly;
 
-  div.column {
-    padding-top: 3rem;
-    padding-left: 10rem;
-    max-width:60%;
-    min-width: 25rem;
-    &.sidebar{
-      margin-right: 3rem;
-      max-width: 30%;
-      width: fit-content;
-      align-content: center;
-      align-self: center;
-      text-align: center;
-    }
-  }
-}
-  form {
-    margin-top: 2rem;
+  .form-container {
+    form{
     display: flex;
-    align-content: center;
     flex-direction: column;
-
-    >* {
-      margin: 0.2rem;
-    }
-
-    input[type=text], input[type=email] {
+    justify-content: center;
+    text-align: left;
+    input[type=text], input[type=email], input[type=password] {
       width: 25rem;
-      height: 3rem;
+      height: 2rem;
     }
 
 
@@ -39,13 +21,17 @@
         margin-top: 2rem;
         margin-bottom: 1rem;
       }
-      max-width: 15rem;
-      height: 2.5rem;
-      width: 15rem;
-      color: darkcyan;
-      background-color: aliceblue;
+      &:hover {
+        border: 0.1rem solid black;
+        color: black;
+      }
+
+      background-color: white;
+      margin: 0.5rem;
+      height: 2rem;
+      width: 10rem;
+      border: 0.1rem solid rgba(37, 158, 209, 0.5);
       border-radius: 1rem;
-      border: 0.1rem solid black;
     }
 
     .sign-up-file {
@@ -53,6 +39,7 @@
     }
 
     button:disabled {
+      border: grey;
       background-color: grey;
       color: white;
       cursor: not-allowed;
@@ -62,12 +49,23 @@
       }
     }
 
+
+    }
   }
 
-  .avatar-container {
+  .side-bar {
     display: flex;
-    width: fit-content;
-    height: fit-content;
-
+    width: 40rem;
+    flex-direction: column;
+    .avatar-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .information-container{
+      text-align: center;
+    }
   }
+
+
+
 }

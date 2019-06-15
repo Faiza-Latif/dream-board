@@ -11,11 +11,11 @@ import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './shared/side-bar/side-bar.component';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './auth/login/login.component';
 import { SignUpModule } from './auth/sign-up/sign-up.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotificationComponent } from './components/notification/notification.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -24,8 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     SideBarComponent,
     HomeComponent,
-    LoginComponent,
-
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,

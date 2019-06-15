@@ -1,0 +1,62 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .form-container {
+    flex: 1;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+
+      input[type=text],
+      input[type=email],
+      input[type=password] {
+        width: 25rem;
+        height: 2rem;
+      }
+
+
+      .sign-up-button {
+        &:first-of-type {
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+        }
+
+        &:hover {
+          border: 0.1rem solid black;
+          color: black;
+        }
+
+        background-color: white;
+        margin: 0.5rem;
+        height: 2rem;
+        width: 10rem;
+        border: 0.1rem solid rgba(37, 158, 209, 0.5);
+        border-radius: 1rem;
+      }
+
+      .sign-up-file {
+        margin-top: 2rem;
+      }
+
+      button:disabled {
+        border: grey;
+        background-color: grey;
+        color: white;
+        cursor: not-allowed;
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+
+
+    }
+  }
+
+}

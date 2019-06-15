@@ -1,0 +1,17 @@
+<div class="login-container">
+<h1>Or log me in!</h1>
+<div class="form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <label>Email</label>
+      <input formControlName="email" type="email" />
+      <label>Password</label>
+      <input formControlName="password" type="password" />
+
+      <button [disabled]=mandatoryFilled type="submit" class="sign-up-button">Save</button>
+      <button type="reset" (click)="reset()" class="sign-up-button">
+        Reset
+      </button>
+    </form>
+</div>
+</div>

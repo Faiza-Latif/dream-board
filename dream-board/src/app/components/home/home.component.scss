@@ -1,26 +1,44 @@
-.home-board-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 3rem;
-  align-items: center;
-  background-image: url(src/assets/ranger-4df6c1b6.png);
-  background-repeat: round;
+.home {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
 
-  h1{
-    margin-bottom: 2rem;
+  .home-board-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    .home-board-button {
+      &:hover {
+        border: 0.1rem solid black;
+        color: black;
+      }
+
+      background-color: white;
+      margin: 0.5rem;
+      height: 2rem;
+      width: 10rem;
+      border: 0.1rem solid rgba(37, 158, 209, 0.5);
+      border-radius: 1rem;
+
+    }
+
   }
 
-  .home-board-button {
-    margin: 0.5rem;
-    height: 2rem;
-    width: 10rem;
-    border: 0.1rem solid #c3c3c3;
-    border-radius: 1rem;
-  }
+  .home-boarder {
+    &:first-of-type {
+      background: linear-gradient(90deg, rgba(2, 0, 36, 0.9) 0%, rgba(37, 158, 209, 0.5) 67%, rgba(0, 212, 255, 0.2) 100%);
+    }
 
+    background: linear-gradient(-90deg, rgba(2, 0, 36, 0.9) 0%, rgba(37, 158, 209, 0.5) 67%, rgba(0, 212, 255, 0.2) 100%);
+    flex: initial;
+    width: 18.75rem;
+  }
 }
